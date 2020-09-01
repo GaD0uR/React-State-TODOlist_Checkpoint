@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Profile from "./Profile/Component/Profile";
+import developer from "./developer.jpg";
+
+import "./App.css";
+import "./Profile/Component/Profile.css";
 
 function App() {
+  const handleNamee = (x) => {
+    alert(x);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="font" style={{ color: "red" }}>
+        Checkpoint React Props
+      </h1>
+      <img src={developer} />
+      <Profile
+        className="font"
+        name="Gadour Bessaâdi"
+        bio="Practice makes perfect."
+        job="Engineer"
+        handleNamee={handleNamee}
+      />
     </div>
   );
 }
